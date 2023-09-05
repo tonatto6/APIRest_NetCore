@@ -25,5 +25,13 @@ namespace API_NET.Controllers
             _context.SaveChanges();
             return true;
         }
+
+        [HttpPut]
+        public bool UpdateJobPosition(JobsPositions job)
+        {
+            _context.JobsPositions.Update(job);
+            _context.SaveChanges();
+            return true;
+        }
     }
 }
