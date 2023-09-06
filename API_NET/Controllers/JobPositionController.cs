@@ -43,7 +43,5 @@ namespace API_NET.Controllers
             return job;
             
         }
-
-        // HOLA ESTO ES UN COMENTARIO
     }
 }
