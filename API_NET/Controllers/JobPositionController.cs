@@ -33,5 +33,15 @@ namespace API_NET.Controllers
             _context.SaveChanges();
             return true;
         }
+
+        [HttpGet]
+        [Route("/api/jobPosition/{id}")]
+        public JobsPositions GetJobPositionsById(int id)
+        {
+            var job = new JobsPositions();
+            job = _context.JobsPositions.Single(b => b.IdJobPosition == id);
+            return job;
+            
+        }
     }
 }
